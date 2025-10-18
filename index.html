@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio by Loner</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="gradient">
+     <header class="cont">
+         <span class="logo">LONER</span>
+         <nav>
+             <ul>
+                 <li class="act"><a href="#home">Домой</a></li>
+                 <li><a href="#about">Обо мне</a></li>
+                 <li class="but"><a href="#" id="contacts-btn">Мои контакты</a></li>
+             </ul>
+         </nav>
+     </header>
+
+     <section id="home" class="cont-me">
+         <div class="cont-rush">
+             <H2>My Projects</H2>
+             <h1 id="typing-title"></h1>
+             <p id="animated-description"></p>
+             <button class="btn" id="project-btn" onclick="scrollToProjects()">Узнать больше</button>
+         </div>
+         <img src="assets/img.png" alt="Project Image" width="850" height="500">
+     </section>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="cont">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Привет, я Loner</h3>
+                    <p>Я Minecraft Developer с более чем 6-летним опытом. Начинаю прогесс изучения Java. Специализируюсь на JavaScript. Так же я увлекаюсь дизайном в Figma!</p>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <span>Java</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="10"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Figma</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="66"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>UI/UX Design</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="cont">
+            <div class="feature-item">
+                <div class="feature-text slide-in-left">
+                    <h3>GMCoins</h3>
+                    <p>GMCoins — это плагин для Minecraft (Paper/Spigot), добавляющий продвинутую систему внутриигровой валюты с поддержкой переводов между игроками, включая оффлайн-переводы. Плагин предоставляет удобное графическое меню с разделами для просмотра баланса, истории и совершения переводов, позволяет вводить сумму через чат с подтверждением, хранит историю операций и ожидающие переводы в data.yml, интегрируется с Vault и Essentials, отображает баланс игрока через BossBar, использует кнопки «Назад» для удобной навигации и показывает уведомления через Title при успешных и неудачных операциях.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="coin.png" alt="Первый проект" class="slide-in-right" width="512" height="512">
+                </div>
+            </div>
+
+            <div class="feature-item reverse">
+                <div class="feature-text slide-in-right">
+                    <h3>SecretMarket</h3>
+                    <p>Тайный рынок с бродячим торговцем. Торговец со специальной 3D моделью появляется случайно каждые 1-3 дня на спавне или рядом с игроками. Предлагает 3-5 случайных товаров с настраиваемыми ценами и шансами. Покупка за внутриигровую валюту через красивое GUI. Авто-уведомления в чат, временное появление (15 минут), админ-панель для управления товарами. Полная защита модели от взаимодействия с хитбоксом.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://grizly.club/uploads/posts/2023-08/1691503247_grizly-club-p-kartinki-mainkraft-personazhi-bez-fona-20.png" alt="Второй проект" class="slide-in-left" width="850" height="512">
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-text slide-in-left">
+                    <h3>LPHelper</h3>
+                    <p>Это инновационный плагин для Minecraft серверов, который революционизирует процесс управления правами через интеграцию с LuckPerms. Используя технологию искусственного интеллекта, плагин позволяет администраторам описывать нужные права на естественном языке, после чего автоматически подбирает и применяет соответствующие разрешения.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/768px-ChatGPT-Logo.svg.png" alt="Третий проект" class="slide-in-right" width="512" height="512">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="cont">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="logo">LONER</span>
+                    <p>Создаю цифровые продукты с душой и вниманием к деталям</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Домой</a>
+                    <a href="#about">Обо мне</a>
+                    <a href="#" id="footer-contacts-btn">Контакты</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Loner. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для контактов -->
+    <div id="contacts-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Мои контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>moskvinextazzy@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <span><a href="https://t.me/Loner_zxc" class="nnnnn">@Loner_zxc</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span><a href="https://github.com/ter1xDEV" class="nnnnn">https://github.com/ter1xDEV</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
